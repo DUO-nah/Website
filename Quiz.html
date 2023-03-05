@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Teaching coding</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+    html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
+    .w3-sidebar {
+      z-index: 3;
+      width: 250px;
+      top: 43px;
+      bottom: 0;
+      height: inherit;
+    }
+    </style>
+  </head>
+<body>
+
+<div class="w3-top">
+  <div class="w3-bar w3-theme w3-top w3-left-align w3-large">
+    <a class="w3-bar-item w3-button w3-right w3-hide-large w3-hover-white w3-large w3-theme-l1" href="javascript:void(0)" onclick="w3_open()"><i class="fa fa-bars"></i></a>
+    <a href="index.html" class="w3-bar-item w3-button w3-theme-l1">Home</a>
+    <a href="HTML.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white">HTML</a>
+    <a href="Video.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Video</a>
+    <a href="Quiz.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Quiz</a>
+  </div>
+</div>
+<nav class="w3-sidebar w3-bar-block w3-collapse w3-large w3-theme-l5 w3-animate-left" id="mySidebar">
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-right w3-xlarge w3-padding-large w3-hover-black w3-hide-large" title="Close Menu">
+    <i class="fa fa-remove"></i>
+  </a>
+  <h4 class="w3-bar-item"><b>HTML basic elements</b></h4>
+  <a class="w3-bar-item w3-button w3-hover-black" href="1.html"> 1</a>
+  <a class="w3-bar-item w3-button w3-hover-black" href="2.html"> 2</a>
+  <a class="w3-bar-item w3-button w3-hover-black" href="3.html"> 3</a>
+</nav>
+
+<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+    <div class="w3-main" style="margin-left:250px">
+
+        <div class="w3-row w3-padding-64">
+          <div class="w3-twothird w3-container">
+            <h1 class="w3-text-teal">HTML Quiz</h1>
+
+            <div dir="ltr" style="text-align: left;" trbidi="on">
+
+                <div class="question">1. What does HTML stand for?</div>
+
+                <ul class="answers">
+                <input id="q1a" name="q1" type="radio" value="a" /> <label for="q1a"> A) Hyperlinks and Text Markup Language </label> <br />
+                <input id="q1b" name="q1" type="radio" value="b" /> <label for="q1b"> B) Home Tool Markup Language </label> <br />
+                <input id="q1c" name="q1" type="radio" value="c" /> <label for="q1c"> C) Hyper Text Markup language </label> <br />
+                <input id="q1d" name="q1" type="radio" value="d" /> <label for="q1d"> D) Hyper Text Modul Language </label> <br />
+                </ul>
+                
+                <style> #q1more {display: none;} </style>
+                <span id="q1dots">...</span>
+                <span id="q1more">Answer is C) <br /> </span> <br />
+    
+                <button id="q1mybtn" onclick="q1function()">Show Answer </button>
+                
+                <script>
+                
+                function q1function() {
+                
+                var q1dots = document.getElementById("q1dots");
+                
+                var q1moreText = document.getElementById("q1more");
+                
+                var q1btnText = document.getElementById("q1mybtn");
+                
+                if (q1dots.style.display === "none") {
+                
+                q1dots.style.display = "inline";
+                
+                q1btnText.innerHTML = "Show Answer";
+                
+                q1moreText.style.display = "none";
+                
+                }
+                
+                else {
+                
+                q1dots.style.display = "none";
+                
+                q1btnText.innerHTML = "Hide Answer";
+                
+                q1moreText.style.display = "inline";
+                
+                }
+                
+                }
+                
+                </script>
+                
+                <br />
+                
+
+
+                <div class="question">
+                
+                2. Choose the correct HTML element for the largest heading:              </div>
+                
+                <ul class="answers">
+                
+                <input id="q2a" name="q2" type="radio" value="a" /> <label for="q2a"> A) [h1] </label> <br />
+                
+                <input id="q2b" name="q2" type="radio" value="b" /> <label for="q2b"> B) [head] </label> <br />
+                
+                <input id="q2c" name="q2" type="radio" value="c" /> <label for="q2c"> C) [h6]  </label> <br />
+                
+                <input id="q2d" name="q2" type="radio" value="d" /> <label for="q2d"> D) [heading] </label> <br />
+                
+                </ul>
+                
+                <style>
+                
+                #q2more {display: none;}
+                
+                </style>
+                
+                <span id="q2dots">...</span>
+                
+                <span id="q2more">
+                
+                Answer is A) <br /> </span><br />
+                
+                <button id="q2mybtn" onclick="q2function()">Show Answer </button>
+                
+                <script>
+                
+                function q2function() {
+                
+                var q2dots = document.getElementById("q2dots");
+                
+                var q2moreText = document.getElementById("q2more");
+                
+                var q2btnText = document.getElementById("q2mybtn");
+                
+                if (q2dots.style.display === "none") {
+                
+                q2dots.style.display = "inline";
+                
+                q2btnText.innerHTML = "Show Answer";
+                
+                q2moreText.style.display = "none";
+                
+                }
+                
+                else {
+                
+                q2dots.style.display = "none";
+                
+                q2btnText.innerHTML = "Hide Answer";
+                
+                q2moreText.style.display = "inline";
+                
+                }
+                
+                }
+                
+                </script>
+                
+                <br />
+                
+
+
+                <div class="question">
+                
+                3. What is the correct HTML for adding a background color?          </div>
+                
+                <ul class="answers">
+                
+                <input id="q3a" name="q3" type="radio" value="a" /> <label for="q3a"> A) [body bg="yellow"] </label> <br />
+                
+                <input id="q3b" name="q3" type="radio" value="b" /> <label for="q3b"> B) [background] yellow [/background] </label> <br />
+                
+                <input id="q3c" name="q3" type="radio" value="c" /> <label for="q3c"> C) [body style="background-color:yellow;"] </label> <br />
+                
+                <input id="q3d" name="q3" type="radio" value="d" /> <label for="q3d"> D) [body style=backgroundcolor:"yellow"] </label> <br />
+                
+                </ul>
+                
+                <style>
+                
+                #q3more {display: none;}
+                
+                </style>
+                
+                <span id="q3dots">...</span>
+                
+                <span id="q3more">
+                
+                Answer is C) <br /> </span><br />
+                
+                <button id="q3mybtn" onclick="q3function()"> Show Answer </button>
+                
+                <script>
+                
+                function q3function() {
+                
+                var q3dots = document.getElementById("q3dots");
+                
+                var q3moreText = document.getElementById("q3more");
+                
+                var q3btnText = document.getElementById("q3mybtn");
+                
+                if (q3dots.style.display === "none") {
+                
+                q3dots.style.display = "inline";
+                
+                q3btnText.innerHTML = "Show Answer";
+                
+                q3moreText.style.display = "none";
+                
+                }
+                
+                else {
+                
+                q3dots.style.display = "none";
+                
+                q3btnText.innerHTML = "Hide Answer";
+                
+                q3moreText.style.display = "inline";
+                
+                }
+                
+                }
+                
+                </script>
+                <br />
+
+                <div class="question">
+        
+                  4. What is the correct HTML for creating a hyperlink?                </div>
+                  
+                  <ul class="answers">
+                  
+                  <input id="q4a" name="q4" type="radio" value="a" /> <label for="q4a"> A) [a href="url"] link text [/a]                  </label> <br />
+                  
+                  <input id="q4b" name="q3" type="radio" value="b" /> <label for="q4b"> B) [a name="url"] link text [/a]              </label> <br />
+                  
+                  <input id="q4c" name="q3" type="radio" value="c" /> <label for="q4c"> C) [a link="url"] link text [/a]               </label> <br />
+                  
+                  <input id="q4d" name="q3" type="radio" value="d" /> <label for="q4d"> D) [a alt="url"] link text [/a]                  </label> <br />
+                  
+                  </ul>
+                  
+                  <style>
+                  
+                  #q4more {display: none;}
+                  
+                  </style>
+                  
+                  <span id="q4dots">...</span>
+                  
+                  <span id="q4more">
+                  
+                  Answer is A) <br /></span><br />
+                  
+                  <button id="q4mybtn" onclick="q4function()"> Show Answer </button>
+                  
+                  <script>
+                  
+                  function q4function() {
+                  
+                  var q4dots = document.getElementById("q4dots");
+                  
+                  var q4moreText = document.getElementById("q4more");
+                  
+                  var q4btnText = document.getElementById("q4mybtn");
+                  
+                  if (q4dots.style.display === "none") {
+                  
+                  q4dots.style.display = "inline";
+                  
+                  q4btnText.innerHTML = "Show Answer";
+                  
+                  q4moreText.style.display = "none";
+                  
+                  }
+                  
+                  else {
+                  
+                  q4dots.style.display = "none";
+                  
+                  q4btnText.innerHTML = "Hide Answer";
+                  
+                  q4moreText.style.display = "inline";
+                  
+                  }
+                  
+                  }
+                  
+                  </script>
+                <br />
+
+                </div>
+                <div class="question">
+        
+                  5. What is the correct HTML for inserting an image?                </div>
+                  
+                  <ul class="answers">
+                  
+                  <input id="q5a" name="q5" type="radio" value="a" /> <label for="q5a"> A) [img href="pic file" alt="name"]  </label> <br />
+                  
+                  <input id="q5b" name="q5" type="radio" value="b" /> <label for="q5b"> B) [img src="pic file"] name [/img] </label> <br />
+                  
+                  <input id="q5c" name="q5" type="radio" value="c" /> <label for="q5c"> C) [img alt="pic file" alt="name"]  </label> <br />
+                  
+                  <input id="q5d" name="q5" type="radio" value="d" /> <label for="q5d"> D) [img src="pic file" alt="name"] </label> <br />
+                  
+                  </ul>
+                  
+                  <style>
+                  
+                  #q5more {display: none;}
+                  
+                  </style>
+                  
+                  <span id="q5dots">...</span>
+                  
+                  <span id="q5more">
+                  
+                  Answer is D) <br /></span><br />
+                  
+                  <button id="q5mybtn" onclick="q5function()"> Show Answer </button>
+                  
+                  <script>
+                  
+                  function q5function() {
+                  
+                  var q5dots = document.getElementById("q5dots");
+                  
+                  var q5moreText = document.getElementById("q5more");
+                  
+                  var q5btnText = document.getElementById("q5mybtn");
+                  
+                  if (q5dots.style.display === "none") {
+                  
+                  q5dots.style.display = "inline";
+                  
+                  q5btnText.innerHTML = "Show Answer";
+                  
+                  q5moreText.style.display = "none";
+                  
+                  }
+                  
+                  else {
+                  
+                  q5dots.style.display = "none";
+                  
+                  q5btnText.innerHTML = "Hide Answer";
+                  
+                  q5moreText.style.display = "inline";
+                  
+                  }
+                  
+                  }
+                  
+                  </script>
+
+                <br />
+
+                  <div class="question">
+        
+                    6. Is doctype decleration [!DOCTYPE] </div>
+                    
+                    <ul class="answers">
+                    
+                    <input id="q6a" name="q6" type="radio" value="a" /> <label for="q6a"> A) True </label> <br />
+                    
+                    <input id="q6b" name="q6" type="radio" value="b" /> <label for="q6b"> B) False </label> <br />
+                    <input id="q6c" name="q6" type="radio" value="c" /> <label for="q6c"> C) IDK </label> <br />
+                    <input id="q6d" name="q6" type="radio" value="d" /> <label for="q6d"> D) Not sure </label> <br />
+                    
+                    </ul>
+                    
+                    <style>
+                    
+                    #q6more {display: none;}
+                    
+                    </style>
+                    
+                    <span id="q6dots">...</span>
+                    
+                    <span id="q6more">
+                    
+                    Answer is B) <br /></span><br />
+                    
+                    <button id="q6mybtn" onclick="q6function()"> Show Answer </button>
+                    
+                    <script>
+                    
+                    function q6function() {
+                    
+                    var q6dots = document.getElementById("q6dots");
+                    
+                    var q6moreText = document.getElementById("q6more");
+                    
+                    var q6btnText = document.getElementById("q6mybtn");
+                    
+                    if (q6dots.style.display === "none") {
+                    
+                    q6dots.style.display = "inline";
+                    
+                    q6btnText.innerHTML = "Show Answer";
+                    
+                    q6moreText.style.display = "none";
+                    
+                    }
+                    
+                    else {
+                    
+                    q6dots.style.display = "none";
+                    
+                    q6btnText.innerHTML = "Hide Answer";
+                    
+                    q6moreText.style.display = "inline";
+                    
+                    }
+                    
+                    }
+                    
+                  </script>
+                <br />
+
+            </div>
+          </div>
+          
+    </div>
+</div>
+
+<script>
+var mySidebar = document.getElementById("mySidebar");
+
+var overlayBg = document.getElementById("myOverlay");
+
+function w3_open() {
+  if (mySidebar.style.display === 'block') {
+    mySidebar.style.display = 'none';
+    overlayBg.style.display = "none";
+  } else {
+    mySidebar.style.display = 'block';
+    overlayBg.style.display = "block";
+  }
+}
+
+function w3_close() {
+  mySidebar.style.display = "none";
+  overlayBg.style.display = "none";
+}
+</script>
+
+</body>
+</html>
